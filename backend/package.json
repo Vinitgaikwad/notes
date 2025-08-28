@@ -1,6 +1,17 @@
 {
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
     "express": "^5.1.0",
-    "mongoose": "^8.17.2"
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.17.2",
+    "zod": "^4.1.3"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test-env": "cross-env NODE_ENV=test node index.js"
+  },
+  "devDependencies": {
+    "cross-env": "^10.0.0"
   }
 }
