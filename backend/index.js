@@ -2,8 +2,8 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const connectDB = require('./config/db.js');
-const UserModel = require('./models/User.js');
 const UserRouter = require('./routes/UserRouter.js');
+const NotesRouter = require('./routes/NotesRouter.js')
 
 dotenv.config({ path: process.env.NODE_ENV === "test" ? ".env.test" : ".env" });
 

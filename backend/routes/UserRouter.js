@@ -19,7 +19,7 @@ UserRouter.post('/sign-up', CheckUserInputMiddleware, CheckUserExist, async (req
         }
 
         res.status(200).json({
-            auth: createToken({ username })
+            auth: createToken({ username, userId: acknowledgementUser._id })
         });
 
     } catch (error) {
@@ -39,7 +39,7 @@ UserRouter.get('/sign-in', CheckUserInputMiddleware, async (req, res) => {
 
         if (ifValidUser) {
             res.status(200).json({
-                auth: createToken({ username }),
+                auth: createToken({ username, userId: ifValidUser._id }),
                 error: null
             });
             return;
